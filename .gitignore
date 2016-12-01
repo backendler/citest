@@ -1,0 +1,6 @@
+.idea
+library/*
+tests/data/*
+vendor
+/.vscode/
+

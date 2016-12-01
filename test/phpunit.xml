@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://www.phpunit.de/manual/current/en/appendixes.configuration.html -->
+<phpunit bootstrap="../src/config/bootstrap.php" colors="true">
+	<testsuite name="CI Test - TestSuite">
+		<directory suffix="Test.php">model</directory>
+	</testsuite>
+	<!--<groups>
+		<include>
+			<group>name</group>
+		</include>
+		<exclude>
+			<group>name</group>
+		</exclude>
+	</groups>-->
+	<php>
+		<!-- ini error_reporting: E_ALL ^ E_WARNING (incl. E_STRICT) -->
+		<ini name="error_reporting" value="30717"/>
+	</php>
+</phpunit>
