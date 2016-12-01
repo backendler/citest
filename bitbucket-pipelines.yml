@@ -9,4 +9,7 @@ pipelines:
   default:
     - step:
         script: # Modify the commands below to build your repository.
+          - composer --version
+          - phpunit --version
           - composer install
+          - phpunit --configuration test/phpunit.xml
