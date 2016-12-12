@@ -9,14 +9,14 @@ services:
 
 before_install:
   - mysql -e 'CREATE DATABASE IF NOT EXISTS test;'
-  - mysql -e < sql/db_1.sql
 
 before_script:
   - composer self-update
   - composer install --no-interaction --prefer-source
 
 script:
-- phpunit --configuration ./test/phpunit.xml
-
+  - mysql -uroot -p test < sql/db_1.sql
+  - phpunit --configuration ./test/phpunit.xml
+  
 
 
