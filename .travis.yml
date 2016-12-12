@@ -15,7 +15,7 @@ before_script:
   - composer install --no-interaction --prefer-source
 
 script:
-  - mysql -uroot -p test < sql/db_1.sql
+  - mysql -uroot test < ./sql/db_1.sql
   - phpunit --configuration ./test/phpunit.xml
   
 
