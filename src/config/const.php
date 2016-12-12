@@ -2,4 +2,4 @@
 
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PWD', 'master');
+define('DB_PWD', '');
