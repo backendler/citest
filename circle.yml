@@ -1,0 +1,16 @@
+machine:
+  php:
+    version: 7.0.4
+
+dependencies:
+  post:
+    - composer self-update
+    - composer install --no-interaction --prefer-source
+
+database:
+  override:
+    - mysql -u ubuntu circle_test < ./mysql/db_1.sql
+
+test:
+  override:
+    - phpunit -c ./test/phpunit.xml
