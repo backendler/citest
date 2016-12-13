@@ -6,9 +6,6 @@ php:
 
 services:
   - mysql
-  - phpUnit
-  - composer
-
 
 build:
   ci:
