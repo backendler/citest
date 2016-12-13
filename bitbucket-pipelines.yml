@@ -3,12 +3,14 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: phpunit/phpunit:5.0.3
+image: smartapps/bitbucket-pipelines-php-mysql:stretch
 
 pipelines:
   default:
     - step:
         script: # Modify the commands below to build your repository.
+          - service mysql start
+          - mysql -h localhost --user=root --password=root -e "CREATE DATABASE test;"
           - composer --version
           - phpunit --version
           - composer install
