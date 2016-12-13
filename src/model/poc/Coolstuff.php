@@ -51,7 +51,7 @@ class Coolstuff
 			'host'		=> DB_HOST,
 			'username' 	=> DB_USER,
 			'password'	=> DB_PWD,
-			'dbname'	=> 'test'
+			'dbname'	=> DB_NAME
 		));
 
 		return $db;

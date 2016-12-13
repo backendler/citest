@@ -2,7 +2,7 @@
 use poc\Coolstuff;
 
 /**
- * Test Class CoolstuffTest
+ * Test Class Coolstuff Test
  */
 class CoolstuffTest extends \PHPUnit_Framework_TestCase{
 
