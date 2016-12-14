@@ -9,9 +9,10 @@ services:
 
 build:
   ci:
+    - apt-get update
+    - apt-get install php5-mysql
     - composer self-update
     - composer install --no-interaction --prefer-source
-    - apt-get install php5-mysql
     - mysql -e "GRANT ALL ON *.* TO root@localhost IDENTIFIED BY ''; FLUSH PRIVILEGES;"
     - mysql -uroot test < ./mysql/db_1.sql
     - phpunit --configuration ./test/phpunit.xml
