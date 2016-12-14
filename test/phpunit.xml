@@ -12,6 +12,11 @@
 			<group>name</group>
 		</exclude>
 	</groups>-->
+	<filter>
+		<whitelist processUncoveredFilesFromWhitelist="true">
+			<directory suffix=".php">../src/model</directory>
+		</whitelist>
+	</filter>
 	<php>
 		<!-- ini error_reporting: E_ALL ^ E_WARNING (incl. E_STRICT) -->
 		<ini name="error_reporting" value="30717"/>
