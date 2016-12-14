@@ -8,4 +8,5 @@ database:
 
 test:
   override:
-    - phpunit -c ./test/phpunit.xml
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    - phpunit -c ./test/phpunit.xml --log-junit $CIRCLE_TEST_REPORTS/junit/phpunit.xml 
