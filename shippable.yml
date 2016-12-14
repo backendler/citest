@@ -9,10 +9,12 @@ services:
 
 build:
   ci:
+    - mkdir -p shippable/testresults
+    - mkdir -p shippable/codecoverage
     - apt-get update
     - apt-get install php5-mysql
     - composer self-update
     - composer install --no-interaction --prefer-source
     - mysql -e "GRANT ALL ON *.* TO root@localhost IDENTIFIED BY ''; FLUSH PRIVILEGES;"
     - mysql -uroot test < ./mysql/db_1.sql
-    - phpunit --configuration ./test/phpunit.xml
+    - phpunit --configuration ./test/phpunit.xml --log-junit shippable/testresults/phpunit.xml --coverage-xml shippable/codecoverage/coverage.xml
