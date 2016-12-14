@@ -12,7 +12,7 @@ elseif(!empty(getenv('CIRCLE_USERNAME'))){
 	define('DB_HOST', '127.0.0.1');
 	define('DB_USER', 'ubuntu');
 	define('DB_PWD',  '');
-	define('DB_NAME', 'test');
+	define('DB_NAME', 'circle_test');
 }
 //bitbucket piplines
 elseif(!empty(getenv('BITBUCKET_COMMIT'))){
