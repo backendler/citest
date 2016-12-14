@@ -22,7 +22,7 @@ elseif(!empty(getenv('BITBUCKET_COMMIT'))){
 	define('DB_NAME', 'test');
 }
 //travis
-elseif(!empty(getenv('TRAVIS'))){
+elseif(!empty(getenv('TRAVIS')) && empty(getenv('SHIPPABLE'))){
 	define('DB_HOST', 'localhost');
 	define('DB_USER', 'root');
 	define('DB_PWD', '');
