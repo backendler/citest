@@ -9,4 +9,4 @@ database:
 test:
   override:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-    - phpunit -c ./test/phpunit.xml --log-junit $CIRCLE_TEST_REPORTS/junit/phpunit.xml
+    - phpunit -c ./test/phpunit.xml --log-junit $CIRCLE_TEST_REPORTS/junit/junit.xml --coverage-html $CIRCLE_ARTIFACTS/coverage.xml
