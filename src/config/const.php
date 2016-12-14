@@ -9,7 +9,7 @@ if(!empty(getenv('MYSQL_USER'))) {
 }
 //circle
 elseif(!empty(getenv('CIRCLE_USERNAME'))){
-	define('DB_HOST', 'localhost');
+	define('DB_HOST', '127.0.0.1');
 	define('DB_USER', 'ubuntu');
 	define('DB_PWD',  '');
 	define('DB_NAME', 'test');
