@@ -11,6 +11,7 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - service mysql start
           - mysql -h localhost --user=root --password=root -e "CREATE DATABASE test;"
+          - mysql -uroot -proot test < ./mysql/db_1.sql
           - composer --version
           - phpunit --version
           - composer install
